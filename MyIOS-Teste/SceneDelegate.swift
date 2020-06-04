@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MyIOS-Teste
+//  RemindMeToday
 //
 //  Created by Carlos Henrique on 20/05/20.
 //  Copyright © 2020 0rientd. All rights reserved.

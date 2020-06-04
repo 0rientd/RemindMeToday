@@ -13,10 +13,11 @@
 		67F3FAB92475CDD200C13E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F3FAB72475CDD200C13E82 /* Main.storyboard */; };
 		67F3FABB2475CDD600C13E82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F3FABA2475CDD600C13E82 /* Assets.xcassets */; };
 		67F3FABE2475CDD600C13E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F3FABC2475CDD600C13E82 /* LaunchScreen.storyboard */; };
+		67F3FAC62476C0C900C13E82 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAC52476C0C900C13E82 /* LocalNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		67F3FAAE2475CDD200C13E82 /* MyIOS-Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyIOS-Teste.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F3FAAE2475CDD200C13E82 /* RemindMeToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMeToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F3FAB12475CDD200C13E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		67F3FAB52475CDD200C13E82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		67F3FABA2475CDD600C13E82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67F3FABD2475CDD600C13E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67F3FABF2475CDD600C13E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F3FAC52476C0C900C13E82 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 		67F3FAAF2475CDD200C13E82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67F3FAAE2475CDD200C13E82 /* MyIOS-Teste.app */,
+				67F3FAAE2475CDD200C13E82 /* RemindMeToday.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +61,7 @@
 				67F3FAB12475CDD200C13E82 /* AppDelegate.swift */,
 				67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */,
 				67F3FAB52475CDD200C13E82 /* ViewController.swift */,
+				67F3FAC52476C0C900C13E82 /* LocalNotification.swift */,
 				67F3FAB72475CDD200C13E82 /* Main.storyboard */,
 				67F3FABA2475CDD600C13E82 /* Assets.xcassets */,
 				67F3FABC2475CDD600C13E82 /* LaunchScreen.storyboard */,
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67F3FAAD2475CDD200C13E82 /* MyIOS-Teste */ = {
+		67F3FAAD2475CDD200C13E82 /* RemindMeToday */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67F3FAC22475CDD600C13E82 /* Build configuration list for PBXNativeTarget "MyIOS-Teste" */;
+			buildConfigurationList = 67F3FAC22475CDD600C13E82 /* Build configuration list for PBXNativeTarget "RemindMeToday" */;
 			buildPhases = (
 				67F3FAAA2475CDD200C13E82 /* Sources */,
 				67F3FAAB2475CDD200C13E82 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "MyIOS-Teste";
+			name = RemindMeToday;
 			productName = "MyIOS-Teste";
-			productReference = 67F3FAAE2475CDD200C13E82 /* MyIOS-Teste.app */;
+			productReference = 67F3FAAE2475CDD200C13E82 /* RemindMeToday.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67F3FAA92475CDD200C13E82 /* Build configuration list for PBXProject "MyIOS-Teste" */;
+			buildConfigurationList = 67F3FAA92475CDD200C13E82 /* Build configuration list for PBXProject "RemindMeToday" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67F3FAAD2475CDD200C13E82 /* MyIOS-Teste */,
+				67F3FAAD2475CDD200C13E82 /* RemindMeToday */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F3FAC62476C0C900C13E82 /* LocalNotification.swift in Sources */,
 				67F3FAB62475CDD200C13E82 /* ViewController.swift in Sources */,
 				67F3FAB22475CDD200C13E82 /* AppDelegate.swift in Sources */,
 				67F3FAB42475CDD200C13E82 /* SceneDelegate.swift in Sources */,
@@ -319,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67F3FAA92475CDD200C13E82 /* Build configuration list for PBXProject "MyIOS-Teste" */ = {
+		67F3FAA92475CDD200C13E82 /* Build configuration list for PBXProject "RemindMeToday" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67F3FAC02475CDD600C13E82 /* Debug */,
@@ -328,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67F3FAC22475CDD600C13E82 /* Build configuration list for PBXNativeTarget "MyIOS-Teste" */ = {
+		67F3FAC22475CDD600C13E82 /* Build configuration list for PBXNativeTarget "RemindMeToday" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67F3FAC32475CDD600C13E82 /* Debug */,

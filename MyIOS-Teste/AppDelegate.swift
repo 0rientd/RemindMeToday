@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MyIOS-Teste
+//  RemindMeToday
 //
 //  Created by Carlos Henrique on 20/05/20.
 //  Copyright © 2020 0rientd. All rights reserved.
@@ -9,12 +9,19 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate { // Adicionado UNUserNotificationCenterDelegate
+    
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions)
+        -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    } // Necessário para mostrar as notificações
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UNUserNotificationCenter.current().delegate = self // Unica linha adicionada para mostrar as notificações
         return true
     }
 
