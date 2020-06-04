@@ -24,7 +24,6 @@ class NotificationManager {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
                 
                 if granted == true && error == nil {
-                    
                 }
         }
     }
@@ -36,19 +35,20 @@ class NotificationManager {
     
     func scheduleNotifications(remindMe: Double) -> Void {
         for notification in notifications {
-            let content = UNMutableNotificationContent()
-            content.title = notification.title
-            content.body = notification.textToRemind
-            content.sound = UNNotificationSound.default
+            
+            let contentNotification = UNMutableNotificationContent()
+            
+            contentNotification.title = notification.title
+            contentNotification.body = notification.textToRemind
+            contentNotification.sound = UNNotificationSound.default
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: remindMe, repeats: false)
-            let request = UNNotificationRequest(identifier: notification.id, content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: notification.id, content: contentNotification, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request) { error in
                 guard error == nil else { return }
-//                print("Scheduling notification with id: \(notification.id)")
+                
             }
         }
     }
-    
 }

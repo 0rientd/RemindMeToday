@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Adding corner layer to background button
         outletButtonRemindMe.layer.cornerRadius = 4
         
         let manager = NotificationManager()
@@ -38,13 +39,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func makeANotification(text: String, date: Double) {
+        
+        let notification = NotificationManager()
+        notification.addNotification(textToRemind: text)
+        
+        notification.scheduleNotifications(remindMe: date)
+        
+    }
+    
     @IBAction func remindMeButton(_ sender: Any) {
                 
         let currentHour = Calendar.current.component(.hour, from: Date())
         let currentMinute = Calendar.current.component(.minute, from: Date())
-    
-        let manager = NotificationManager()
-        manager.addNotification(textToRemind: textFieldReminder.text ?? "")
         
         let date = dataHora.calendar.dateComponents([.hour, .minute], from: dataHora.date)
         
@@ -66,9 +73,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             var remindMe = hourReminder - currentHour
             remindMe = (remindMe * 60) * 60
             remindMe += (minuteReminder - currentMinute) * 60
-            let teste = Double(remindMe)
             
-            manager.scheduleNotifications(remindMe: teste)
+            makeANotification(text: textFieldReminder.text ?? "", date: Double(remindMe))
 
             tempLabel.text = "Agendado com sucesso!"
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -81,10 +87,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             var remindMe = hourReminder - currentHour
             remindMe = (remindMe * 60) * 60
             remindMe += (currentMinute - minuteReminder) * 60
-            let teste = Double(remindMe)
             
-            manager.scheduleNotifications(remindMe: teste)
-            
+            makeANotification(text: textFieldReminder.text ?? "", date: Double(remindMe))
+
             tempLabel.text = "Agendado com sucesso!"
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 self.tempLabel.text = ""
