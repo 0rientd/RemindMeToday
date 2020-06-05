@@ -28,10 +28,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tempLabel.alpha = 0
+        dataHora.alpha = 0
         
-        //Adding corner layer to background button
         outletButtonRemindMe.layer.cornerRadius = 4
-        
+        addShadow(thingToAddShadow: textFieldReminder)
+        addShadow(thingToAddShadow: outletButtonRemindMe)
+                
         let manager = NotificationManager()
         manager.RequestPermission()
         
@@ -76,11 +79,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             makeANotification(text: textFieldReminder.text ?? "", date: Double(remindMe))
 
-            tempLabel.text = "Agendado com sucesso!"
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                self.tempLabel.text = ""
-            })
-            
+            fadeIn(thingToFadeIn: tempLabel)
+            fadeOut(thingToFadeOut: tempLabel)
             
         } else {
             
@@ -90,15 +90,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             makeANotification(text: textFieldReminder.text ?? "", date: Double(remindMe))
 
-            tempLabel.text = "Agendado com sucesso!"
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                self.tempLabel.text = ""
-            })
+            fadeIn(thingToFadeIn: tempLabel)
+            fadeOut(thingToFadeOut: tempLabel)
+            
         }
     }
     
     @IBAction func actionUITextField(_ sender: Any) {
-      // adicionar aqui a funcao de aparecer o datepicker quando o textfield estiver diferente de vazio. Usar IF talvez ajude
+        fadeIn(thingToFadeIn: dataHora)
     }
     
 }

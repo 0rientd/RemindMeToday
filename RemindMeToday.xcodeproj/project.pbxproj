@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67E1875E248AA33E00A05B49 /* customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1875D248AA33E00A05B49 /* customization.swift */; };
 		67F3FAB22475CDD200C13E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAB12475CDD200C13E82 /* AppDelegate.swift */; };
 		67F3FAB42475CDD200C13E82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */; };
 		67F3FAB62475CDD200C13E82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAB52475CDD200C13E82 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67E1875D248AA33E00A05B49 /* customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customization.swift; sourceTree = "<group>"; };
 		67F3FAAE2475CDD200C13E82 /* RemindMeToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMeToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F3FAB12475CDD200C13E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				67F3FAB12475CDD200C13E82 /* AppDelegate.swift */,
 				67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */,
 				67F3FAB52475CDD200C13E82 /* ViewController.swift */,
+				67E1875D248AA33E00A05B49 /* customization.swift */,
 				67F3FAC52476C0C900C13E82 /* LocalNotification.swift */,
 				67F3FAB72475CDD200C13E82 /* Main.storyboard */,
 				67F3FABA2475CDD600C13E82 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F3FAC62476C0C900C13E82 /* LocalNotification.swift in Sources */,
+				67E1875E248AA33E00A05B49 /* customization.swift in Sources */,
 				67F3FAB62475CDD200C13E82 /* ViewController.swift in Sources */,
 				67F3FAB22475CDD200C13E82 /* AppDelegate.swift in Sources */,
 				67F3FAB42475CDD200C13E82 /* SceneDelegate.swift in Sources */,
@@ -295,7 +299,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "orientd.MyIOS-Teste";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -314,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "orientd.MyIOS-Teste";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
