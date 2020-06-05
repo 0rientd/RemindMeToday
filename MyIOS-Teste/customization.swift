@@ -29,7 +29,7 @@ func fadeIn(thingToFadeIn: UIView){
 func fadeOut(thingToFadeOut: UIView){
  
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 1.5, animations: {
             thingToFadeOut.alpha = 0
         })
     })

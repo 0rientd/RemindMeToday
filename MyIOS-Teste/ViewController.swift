@@ -32,6 +32,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         dataHora.alpha = 0
         
         outletButtonRemindMe.layer.cornerRadius = 4
+        tempLabel.layer.cornerRadius = 4
+        tempLabel.layer.masksToBounds = true
+        
         addShadow(thingToAddShadow: textFieldReminder)
         addShadow(thingToAddShadow: outletButtonRemindMe)
                 
@@ -61,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let hourReminder = date.hour!
         let minuteReminder = date.minute!
         
-        if (hourReminder <= currentHour && minuteReminder < currentMinute || hourReminder < currentHour) {
+        if (hourReminder <= currentHour && minuteReminder <= currentMinute || hourReminder < currentHour) {
             
             let alertaDeHoraIncorreta = UIAlertController(title: "Ops!", message: "Você deve escolher uma hora posterior a hora atual.", preferredStyle: .alert)
             
