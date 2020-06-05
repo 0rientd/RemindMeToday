@@ -98,6 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func actionUITextField(_ sender: Any) {
+      // adicionar aqui a funcao de aparecer o datepicker quando o textfield estiver diferente de vazio. Usar IF talvez ajude
     }
     
 }
