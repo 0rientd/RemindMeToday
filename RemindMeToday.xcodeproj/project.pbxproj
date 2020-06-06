@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6794DBDE248B5E62008C1123 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6794DBDD248B5E62008C1123 /* SecondViewController.swift */; };
 		67E1875E248AA33E00A05B49 /* customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E1875D248AA33E00A05B49 /* customization.swift */; };
 		67F3FAB22475CDD200C13E82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAB12475CDD200C13E82 /* AppDelegate.swift */; };
 		67F3FAB42475CDD200C13E82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6794DBDD248B5E62008C1123 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		67E1875D248AA33E00A05B49 /* customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customization.swift; sourceTree = "<group>"; };
 		67F3FAAE2475CDD200C13E82 /* RemindMeToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMeToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F3FAB12475CDD200C13E82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				67F3FAB12475CDD200C13E82 /* AppDelegate.swift */,
 				67F3FAB32475CDD200C13E82 /* SceneDelegate.swift */,
 				67F3FAB52475CDD200C13E82 /* ViewController.swift */,
+				6794DBDD248B5E62008C1123 /* SecondViewController.swift */,
 				67E1875D248AA33E00A05B49 /* customization.swift */,
 				67F3FAC52476C0C900C13E82 /* LocalNotification.swift */,
 				67F3FAB72475CDD200C13E82 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6794DBDE248B5E62008C1123 /* SecondViewController.swift in Sources */,
 				67F3FAC62476C0C900C13E82 /* LocalNotification.swift in Sources */,
 				67E1875E248AA33E00A05B49 /* customization.swift in Sources */,
 				67F3FAB62475CDD200C13E82 /* ViewController.swift in Sources */,

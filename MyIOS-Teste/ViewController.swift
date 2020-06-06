@@ -25,6 +25,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldReminder: UITextField!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var outletButtonRemindMe: UIButton!
+    @IBOutlet weak var ViewTextField: UIView!
+    
+    @IBAction func callSecondView(_ sender: Any) {
+    
+        
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,8 +107,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func actionUITextField(_ sender: Any) {
+        moveToTop(view: ViewTextField)
         fadeIn(thingToFadeIn: dataHora)
     }
+    
+    
+    @IBAction func toggleColorBackground(_ sender: Any) {
+        
+            
+        
+    }
+
     
 }
 

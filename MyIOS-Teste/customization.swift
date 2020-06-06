@@ -20,7 +20,7 @@ func addShadow(thingToAddShadow: UIView){
 
 func fadeIn(thingToFadeIn: UIView){
     
-    UIView.animate(withDuration: 1, animations: {
+    UIView.animate(withDuration: 0.75, animations: {
         thingToFadeIn.alpha = 1
     })
     
@@ -33,4 +33,12 @@ func fadeOut(thingToFadeOut: UIView){
             thingToFadeOut.alpha = 0
         })
     })
+}
+
+func moveToTop(view: UIView){
+    
+    UIView.animate(withDuration: 1.2, animations: {
+        view.frame.origin.y = 280
+    })
+    
 }
