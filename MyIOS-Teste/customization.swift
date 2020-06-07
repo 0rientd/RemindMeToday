@@ -8,6 +8,8 @@
 
 import UIKit
 
+var customizationColorBackgroud = UIView()
+
 func addShadow(thingToAddShadow: UIView){
     
     thingToAddShadow.layer.shadowColor = UIColor.systemGray.cgColor

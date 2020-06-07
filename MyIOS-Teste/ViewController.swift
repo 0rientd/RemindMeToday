@@ -26,7 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var outletButtonRemindMe: UIButton!
     @IBOutlet weak var ViewTextField: UIView!
-    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var viewLogo: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         outletButtonRemindMe.layer.cornerRadius = 4
         tempLabel.layer.cornerRadius = 4
         tempLabel.layer.masksToBounds = true
-        
-        mainView.backgroundColor = UIColor.red
         
         addShadow(thingToAddShadow: textFieldReminder)
         addShadow(thingToAddShadow: outletButtonRemindMe)
@@ -56,6 +55,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         notification.scheduleNotifications(remindMe: date)
         
+    }
+    
+    func changeColor(){
+        
+        mainView.backgroundColor = customizationColorBackgroud.backgroundColor
+
     }
     
     @IBAction func remindMeButton(_ sender: Any) {
@@ -109,7 +114,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func callSecondView(_ sender: Any) {
+        let settings = storyboard?.instantiateViewController(identifier: "ColorPickBoard") as! Third_ViewController
+        settings.colorDelegate = self
+        present(settings, animated: true, completion: nil)
     }
-    
 }
 
+extension ViewController: Teste {
+    func returnView(view: UIView) {
+        mainView.backgroundColor = customizationColorBackgroud.backgroundColor
+        ViewTextField.backgroundColor = customizationColorBackgroud.backgroundColor
+        viewLogo.backgroundColor = customizationColorBackgroud.backgroundColor
+    }
+}

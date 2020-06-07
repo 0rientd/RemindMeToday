@@ -10,15 +10,18 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet var labelTeste: UIView!
     @IBOutlet weak var settingsColor: UIImageView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         settingsColor.layer.cornerRadius = 10
         settingsColor.layer.masksToBounds = true
 
+    }
+    
+    @IBAction func changeColorButton(_ sender: Any) {
+        
     }
     
 }

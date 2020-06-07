@@ -10,8 +10,8 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RemindMeToday" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="RemindMeToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -109,6 +109,7 @@
                         <outlet property="outletButtonRemindMe" destination="Hwz-0M-yum" id="dPc-pW-eki"/>
                         <outlet property="tempLabel" destination="hYJ-fl-bfo" id="6Sw-gZ-vPj"/>
                         <outlet property="textFieldReminder" destination="cUt-DE-3Pt" id="p3z-cw-9d4"/>
+                        <outlet property="viewLogo" destination="MTa-C4-TpV" id="dV6-OZ-Pik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,7 +119,7 @@
         <!--Chage Color View Controller Scene-->
         <scene sceneID="feP-tE-Jle">
             <objects>
-                <viewController title="Chage Color View Controller Scene" id="8AE-Hj-vTA" customClass="Third_ViewController" customModule="RemindMeToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorPickBoard" title="Chage Color View Controller Scene" id="8AE-Hj-vTA" customClass="Third_ViewController" customModule="RemindMeToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zsS-Ee-82k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +130,15 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="lightGrayButton:" destination="8AE-Hj-vTA" eventType="touchUpInside" id="EIK-bZ-ewu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD8-gf-9NP">
+                                <rect key="frame" x="150" y="201" width="74" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="indigoButton:" destination="8AE-Hj-vTA" eventType="touchUpInside" id="5UY-3q-kSF"/>
+                                    <action selector="lightGrayButton:" destination="8AE-Hj-vTA" eventType="touchUpInside" id="pfl-vJ-TJO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,6 +175,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="changeColorButton:" destination="xTu-he-eQe" eventType="touchUpInside" id="9Nw-84-62k"/>
                                     <segue destination="8AE-Hj-vTA" kind="show" identifier="Change color" id="gxQ-jw-xRx"/>
                                 </connections>
                             </button>
@@ -174,7 +185,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="oIw-sU-9sN"/>
                     <connections>
-                        <outlet property="labelTeste" destination="Yw4-S3-2vI" id="3TW-c4-ArD"/>
                         <outlet property="settingsColor" destination="DFW-YF-WRe" id="2Ys-Lx-9Wo"/>
                     </connections>
                 </viewController>
