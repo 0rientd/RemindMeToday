@@ -26,12 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var outletButtonRemindMe: UIButton!
     @IBOutlet weak var ViewTextField: UIView!
-    
-    @IBAction func callSecondView(_ sender: Any) {
-    
-        
-    
-    }
+    @IBOutlet var mainView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         outletButtonRemindMe.layer.cornerRadius = 4
         tempLabel.layer.cornerRadius = 4
         tempLabel.layer.masksToBounds = true
+        
+        mainView.backgroundColor = UIColor.red
         
         addShadow(thingToAddShadow: textFieldReminder)
         addShadow(thingToAddShadow: outletButtonRemindMe)
@@ -111,13 +108,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fadeIn(thingToFadeIn: dataHora)
     }
     
-    
-    @IBAction func toggleColorBackground(_ sender: Any) {
-        
-            
-        
+    @IBAction func callSecondView(_ sender: Any) {
     }
-
     
 }
 

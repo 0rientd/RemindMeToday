@@ -11,26 +11,14 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet var labelTeste: UIView!
+    @IBOutlet weak var settingsColor: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBAction func toggleTeste(_ sender: Any) {
-        
-        if labelTeste.backgroundColor == UIColor.red {
-            
-            labelTeste.backgroundColor = UIColor.systemBackground
-            
-        } else {
-            
-            labelTeste.backgroundColor = UIColor.red
-        
-        }
-        
+        settingsColor.layer.cornerRadius = 10
+        settingsColor.layer.masksToBounds = true
+
     }
     
 }
