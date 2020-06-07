@@ -15,14 +15,16 @@ protocol Teste {
 class Third_ViewController: UIViewController {
 
     @IBOutlet weak var lightGreyOutlet: UIButton!
+    @IBOutlet weak var systemIndigoOutlet: UIButton!
     var colorDelegate: Teste!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        lightGreyOutlet.layer.cornerRadius = 10
-        lightGreyOutlet.layer.masksToBounds = true
+        addCorner(button: lightGreyOutlet)
+        addCorner(button: systemIndigoOutlet)
         
+                
     }
     
     @IBAction func lightGrayButton(_ sender: Any) {
@@ -32,7 +34,7 @@ class Third_ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
-    
+
     @IBAction func indigoButton (_ sender: Any) {
         customizationColorBackgroud.backgroundColor = UIColor.systemIndigo
         colorDelegate.returnView(view: customizationColorBackgroud)
@@ -40,5 +42,6 @@ class Third_ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+
 
 }

@@ -44,3 +44,10 @@ func moveToTop(view: UIView){
     })
     
 }
+
+func addCorner(button: UIView){
+    
+    button.layer.cornerRadius = 10
+    button.layer.masksToBounds = true
+    
+}
