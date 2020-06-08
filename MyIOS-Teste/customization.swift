@@ -10,6 +10,12 @@ import UIKit
 
 var customizationColorBackgroud = UIView()
 
+func saveNumberColor(number: Int){
+    
+    UserDefaults.standard.set(number, forKey: "ValueColor")
+        
+}
+
 func addShadow(thingToAddShadow: UIView){
     
     thingToAddShadow.layer.shadowColor = UIColor.systemGray.cgColor

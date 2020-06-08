@@ -34,6 +34,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         tempLabel.alpha = 0
         dataHora.alpha = 0
         
+        let defaultColorUI = UserDefaults.standard.integer(forKey: "ValueColor")
+        
+        if defaultColorUI == 1 {
+            mainView.backgroundColor = UIColor.lightGray
+            viewLogo.backgroundColor = UIColor.lightGray
+            ViewTextField.backgroundColor = UIColor.lightGray
+            
+        } else if defaultColorUI == 2 {
+            mainView.backgroundColor = UIColor.systemTeal
+            viewLogo.backgroundColor = UIColor.systemTeal
+            ViewTextField.backgroundColor = UIColor.systemTeal
+        }
+        
         outletButtonRemindMe.layer.cornerRadius = 4
         tempLabel.layer.cornerRadius = 4
         tempLabel.layer.masksToBounds = true

@@ -32,14 +32,17 @@ class Third_ViewController: UIViewController {
     }
     
     @IBAction func lightGrayButton(_ sender: Any) {
+        saveNumberColor(number: 1)
+        
         customizationColorBackgroud.backgroundColor = UIColor.lightGray
         colorDelegate.returnView(view: customizationColorBackgroud)
-        print("Changed the colot to Light Gray")
         dismiss(animated: true, completion: nil)
         
     }
 
     @IBAction func indigoButton (_ sender: Any) {
+        saveNumberColor(number: 2)
+        
         customizationColorBackgroud.backgroundColor = UIColor.systemTeal
         colorDelegate.returnView(view: customizationColorBackgroud)
         dismiss(animated: true, completion: nil)
