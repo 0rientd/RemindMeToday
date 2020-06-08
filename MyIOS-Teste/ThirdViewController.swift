@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Teste {
+protocol returnViewProtocol {
     func returnView(view: UIView)
 }
 
@@ -17,7 +17,7 @@ class Third_ViewController: UIViewController {
     @IBOutlet weak var lightGreyOutlet: UIButton!
     @IBOutlet weak var systemIndigoOutlet: UIButton!
     @IBOutlet weak var moreSettingsOutlet: UIButton!
-    var colorDelegate: Teste!
+    var colorDelegate: returnViewProtocol! // referencia do procolo
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class Third_ViewController: UIViewController {
         saveNumberColor(number: 1)
         
         customizationColorBackgroud.backgroundColor = UIColor.lightGray
-        colorDelegate.returnView(view: customizationColorBackgroud)
+        colorDelegate.returnView(view: customizationColorBackgroud) // 
         dismiss(animated: true, completion: nil)
         
     }

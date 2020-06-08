@@ -22,6 +22,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func changeColorButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        
     }
     
 }
