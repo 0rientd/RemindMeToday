@@ -16,6 +16,7 @@ class Third_ViewController: UIViewController {
 
     @IBOutlet weak var lightGreyOutlet: UIButton!
     @IBOutlet weak var systemIndigoOutlet: UIButton!
+    @IBOutlet weak var moreSettingsOutlet: UIButton!
     var colorDelegate: Teste!
     
     override func viewDidLoad() {
@@ -23,6 +24,9 @@ class Third_ViewController: UIViewController {
 
         addCorner(button: lightGreyOutlet)
         addCorner(button: systemIndigoOutlet)
+        
+        moreSettingsOutlet.layer.cornerRadius = 4
+        addShadow(thingToAddShadow: moreSettingsOutlet)
         
                 
     }
@@ -36,9 +40,8 @@ class Third_ViewController: UIViewController {
     }
 
     @IBAction func indigoButton (_ sender: Any) {
-        customizationColorBackgroud.backgroundColor = UIColor.systemIndigo
+        customizationColorBackgroud.backgroundColor = UIColor.systemTeal
         colorDelegate.returnView(view: customizationColorBackgroud)
-        print("Changed the colot to Light Gray")
         dismiss(animated: true, completion: nil)
         
     }
