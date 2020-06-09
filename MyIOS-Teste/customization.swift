@@ -61,6 +61,18 @@ func changeColorBackgroundView (numberDefault: Int) -> UIColor {
     case 2:
         return UIColor.systemTeal
         
+    case 3:
+        return UIColor.systemBackground
+        
+    case 4:
+        return UIColor.orange
+        
+    case 5:
+        return UIColor.systemPink
+        
+    case 6:
+        return #colorLiteral(red: 0.1254901961, green: 1, blue: 0.5333333333, alpha: 1)
+        
     default:
         return UIColor.systemBackground
     }
@@ -76,6 +88,18 @@ func changeColorBackgroundLogo (numberDefault: Int) -> UIColor {
     case 2:
         return UIColor.systemTeal
         
+    case 3:
+        return UIColor.systemBackground
+        
+    case 4:
+        return UIColor.orange
+        
+    case 5:
+        return UIColor.systemPink
+        
+    case 6:
+        return #colorLiteral(red: 0.1254901961, green: 1, blue: 0.5333333333, alpha: 1)
+        
     default:
         return UIColor.systemBackground
     }
@@ -90,6 +114,18 @@ func changeColorBackgroundTextField (numberDefault: Int) -> UIColor {
         
     case 2:
         return UIColor.systemTeal
+        
+    case 3:
+        return UIColor.systemBackground
+        
+    case 4:
+        return UIColor.orange
+        
+    case 5:
+        return UIColor.systemPink
+        
+    case 6:
+        return #colorLiteral(red: 0.1254901961, green: 1, blue: 0.5333333333, alpha: 1)
         
     default:
         return UIColor.systemBackground
